@@ -1,0 +1,101 @@
+body 
+{
+    background-color: white;
+}
+
+.headfont
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+
+.h4font
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+
+.background
+{
+    background: black;
+    margin: -.5%;
+    height:20vh;
+    text-align:center;
+    color:#fff;    
+}
+
+.clock
+{
+    font-family: monospace;
+}
+
+.Retire
+{
+    font-family: monospace;
+    color: white;
+    float: left;
+    margin-top: -3%;
+    margin-left: 8%;
+}
+
+.BoxText
+{
+    font-family: monospace;
+    font-size:2.5em;
+    font-weight: lighter;
+    padding-top: 20px;
+}
+
+.Boxcontainer 
+{ 
+    width:100%; 
+    text-align: center;
+    padding-top: 0.1em;
+    padding-right: 10px;
+    padding-bottom: 0.01em;
+    padding-left: 0px;
+
+} 
+
+#cardleft
+{   
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    width:30%; 
+    height:460px;
+    float:left; 
+    margin-left:50px; 
+        
+}
+
+#cardMiddle 
+{
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    width:30%; 
+    height:460px;
+    float: left;  
+    margin-left:50px;
+}
+
+#cardRight
+{
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    width:30%; 
+    height:460px;
+    float:left; 
+    margin-left: 50px;  
+}
+
+.Days
+{
+    float: center;
+    font-family: monospace;
+    font-size: 700%;
+}
+
+.Quote
+{
+    text-align: center;
+    padding-top: 32%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
