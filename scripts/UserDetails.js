@@ -3,6 +3,11 @@ function openForm(){
 
     if (document.getElementById("userDetails").style.display == "none")
     {    
+        //show only date > today
+        var today = new Date().toISOString().split('T')[0];
+        document.getElementById('retDate').setAttribute('min', today);
+
+
         document.getElementById("userDetails").style.display = "Block";
     }
     else

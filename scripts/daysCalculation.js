@@ -1,10 +1,7 @@
 //get data from file
 var userDataread = JSON.parse(window.localStorage.getItem('UserData'));
 
-//convert time to proper format
-var date = userDataread.retirementDate.split("T")[0];
-date = date.split("-");
-var newDate = date[2] +"/"+ date[1] +"/"+ date[0];
+
 
 
 //check local storage is empty
@@ -22,6 +19,11 @@ if(userDataread == null)
 
 else
 {
+    //convert time to proper format
+    var date = userDataread.retirementDate.split("T")[0];
+    date = date.split("-");
+    var newDate = date[2] +"/"+ date[1] +"/"+ date[0];
+
     dataEmpty = "false";
     document.getElementById("message").style.display = 'none';
 

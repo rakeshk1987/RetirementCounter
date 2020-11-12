@@ -19,7 +19,7 @@
  
                 <h3>Enter your Details</h3><br>
                 <label for="retiremtnDate">Your planned retirement date</label>
-                <input type="date" id="retDate" name="retireDate" required><br>
+                <input type="date" id="retDate" name="retireDate" required min="<?php echo date('Y'); ?>"><br>
 
                 <label for="WorkingDays">Working Days in a week</label>
                 <input type="number" id="workDays" placeholder="#Working Days" name="Working Days" required min="1" max="7"><br>
