@@ -2,8 +2,6 @@
 var userDataread = JSON.parse(window.localStorage.getItem('UserData'));
 
 
-
-
 //check local storage is empty
 var dataEmpty;
 if(userDataread == null)
@@ -55,26 +53,32 @@ var today = new Date();
 var date = today.getDate() +'-'+ (today.getMonth()+1) +'-'+ today.getFullYear();
 document.getElementById('clock').innerHTML= "Today: " + date;
 
-//Calendar Days Calculation
-var CalTime = Math.abs(RetireDate - today);
-var totalDays = Math.ceil(CalTime / (1000 * 60 * 60 * 24));
-document.getElementById('CalDays').innerHTML = totalDays;  
+if(dataEmpty != "true")
+{
 
-//Years Left Calculation
-var totalYear = Math.floor(totalDays/365);
-document.getElementById('yearsLeft').innerHTML = totalYear;
+    //Calendar Days Calculation
+    var CalTime = Math.abs(RetireDate - today);
+    var totalDays = Math.ceil(CalTime / (1000 * 60 * 60 * 24));
 
-//Working Days Calculation
-var workingDays = userDataread.workperWeek;
-var numberofBankHolidays = userDataread.bankHolidays;
-var numberofHolidays = userDataread.holidays;
+    document.getElementById('CalDays').innerHTML = totalDays;  
 
-var totalMonth = Math.floor(totalDays / 12)
-var totalWeek = Math.floor(totalDays / 7);
+    //Years Left Calculation
+    var totalYear = Math.floor(totalDays/365);
+    document.getElementById('yearsLeft').innerHTML = totalYear;
 
-var totalHolidays = ((numberofHolidays + numberofBankHolidays) / 365) * totalDays;
-var workingDays = ((totalWeek * workingDays)-totalHolidays);
+    //Working Days Calculation
+    var workingDays = parseInt(userDataread.workperWeek);
+    var numberofBankHolidays = parseInt(userDataread.bankHolidays);
+    var numberofHolidays = parseInt(userDataread.holidays);
 
-document.getElementById('WorkDays').innerHTML = Math.round(workingDays);
+    var totalMonth = Math.floor(totalDays / 30)
+    var totalWeek = Math.floor((totalDays/365)*52);
 
+    var totalHolidays = ((numberofHolidays + numberofBankHolidays) / 365) * totalDays;
+    console.log(numberofHolidays + numberofBankHolidays);
+
+    var workDaysLeft = ((totalWeek * workingDays)-totalHolidays);
+
+    document.getElementById('WorkDays').innerHTML = Math.round(workDaysLeft);
+}
 

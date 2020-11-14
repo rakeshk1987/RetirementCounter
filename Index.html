@@ -19,7 +19,7 @@
  
                 <h3>Enter your Details</h3><br>
                 <label for="retiremtnDate">Your planned retirement date</label>
-                <input type="date" id="retDate" name="retireDate" required min="<?php echo date('Y'); ?>"><br>
+                <input type="date" id="retDate" name="retireDate" required><br>
 
                 <label for="WorkingDays">Working Days in a week</label>
                 <input type="number" id="workDays" placeholder="#Working Days" name="Working Days" required min="1" max="7"><br>
@@ -30,14 +30,14 @@
                 <label for="Holidays">Leaves in a Year</label>
                 <input type="number" id="Holidays" placeholder="#Planned Leaves" name="Holidays" required min="0" max="100"><br>
  
-                <button id = "submitBtn" type="submit" class="btn" onclick="SubmitForm()">Submit</button>
+                <button id = "submitBtn" type="submit" class="btn" onclick="SubmitForm()">Calculate</button>
                 <button id = "cancel" type="button" class="btn cancel" onclick="CloseForm()">Cancel</button>
  
             </form>
         </div>
     </span>
         
-        <div class="p-5 mb-2 bg-dark text-white pt-3">
+        <div class="p-5 bg-dark text-white pt-3">
 
             <div class="text-center">
                 <h1 class="font-weight-bold headfont">Your Retirement Clock</h1>
@@ -46,7 +46,7 @@
             </div> 
 
             
-            <div class="text-center clearfix mt-5 pb-3">
+            <div class="text-center clearfix mt-5 font">
                 <span id="clock" class="font-weight-light" ></span>
                 <span id="clock" class="font-weight-light" > | </span>
                 <span id="RetireDay" class="font-weight-light "></span>
@@ -58,7 +58,7 @@
             <div class="text-center col pt-4 px-4">
                 <div class="row" id="Boxes">
                     <div class="col">                        
-                        <div class="shadow p-3 rounded" style="min-height: 460px;">
+                        <div class="shadow p-3 rounded" style="min-height: 360px;">
 
                             <p class="BoxText">Calendar Days Left</p>
                             <br></br>
@@ -68,7 +68,7 @@
 
                     </div>
                     <div class="col">                        
-                        <div class="shadow p-3 rounded" style="min-height: 460px;">
+                        <div class="shadow p-3 rounded" style="min-height: 360px;">
             
                             <p class="BoxText">Working Days Left</p>
                             <br></br>
@@ -78,7 +78,7 @@
 
                     </div>
                     <div class="col">                        
-                        <div class="shadow p-3 rounded" style="min-height: 460px;">
+                        <div class="shadow p-3 rounded" style="min-height: 360px;">
                 
                             <p  class="BoxText ">Years Left</p>
                             <br></br>
@@ -89,12 +89,84 @@
                 </div>
             </div>
         </div>
+
+        <div id="counter">
+            <div class="col text-center py-5">
+                <div class="row">
+                    
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    
+                    
+                    <div class="col">
+                        <div class="shadow-sm p-1 bg-white rounded">
+
+                            <p id="year" style="font-size: xxx-large;"></p>
+                            <p style="font-size: small;">Years</p>
+
+                        </div>                        
+                    </div>
+
+                    <div class="col">
+                        <div class="shadow-sm p-1 bg-white rounded">
+
+                            <p id="month" style="font-size: xxx-large;"></p>
+                            <p style="font-size: small;">Months</p>
+                            
+                            
+                        </div>                        
+                    </div>
+
+                    <div class="col">
+                        <div class="shadow-sm p-1  bg-white rounded">
+
+                            <p id="days" style="font-size: xxx-large;"></p>
+                            <p style="font-size: small;">Days</p>
+                            
+                        </div>                        
+                    </div>
+
+                    <div class="col">
+                        <div class="shadow-sm p-1 bg-white rounded">
+                            
+                            <p id="hours" style="font-size: xxx-large;"></p>
+                            <p style="font-size: small;">Hours</p>
+                            
+                        </div>                        
+                    </div>
+
+                    <div class="col">
+                        <div class="shadow-sm p-1 bg-white rounded">
+
+                            <p id="minutes" style="font-size: xxx-large;"></p>
+                            <p style="font-size: small;">Minutes</p>
+                            
+                        </div>                        
+                    </div>
+
+                    <div class="col">
+                        <div class="shadow-sm p-1 bg-white rounded">
+
+                            <p id="seconds" style="font-size: xxx-large;"></p>
+                            <p style="font-size: small;">Seconds</p>
+                                                        
+                        </div>                        
+                    </div>
+                 
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+
+                </div>
+            </div>
+        </div>
         
-        <div class="col py-4 mt-4">
+        <div class="col">
             <div class="row">
                 <div class="col text-center">
                     <p id ="message" class="text-center font-weight-lighter" style="color: red; font-size: x-large;">Please select your planned retirement date using the top right button!</p>
-                    <p id = "quote" class="text-center font-weight-lighter py-3 mt-3" style="color:red; font-size: large;">"The beauty of retirement is that you don’t have to worry about getting caught for doing nothing"</p>
+                    <p id = "quote" class="text-center font-weight-lighter py-1 mt-1" style="color:black; font-size: large;">"The beauty of retirement is that you don’t have to worry about getting caught for doing nothing"</p>
                 </div>
             </div>
         </div>
@@ -103,6 +175,7 @@
         <script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
         <script type="text/javascript" src="./scripts/daysCalculation.js"></script>
         <script type="text/javascript" src="./scripts/UserDetails.js"></script>
+        <script type="text/javascript" src="./scripts/counterTime.js"></script>
         
     </body>
 </html>
